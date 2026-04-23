@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בונה אוטומציה - בס״ד</title>
+    <style>
+        @font-face {
+            font-family: 'Dana Yad Alef';
+            src: url('data:application/x-font-woff;base64,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\nFOixlbQScRfuZFQP/fnrVDeIj5y5pHa+vCJ3I/Ti87jFlbHugpPeFYIKTzdt4zyoNDM1eBso023N\nMEZ6e0LHphp3NNM6AbpsM0NVHCXss/4c3kf/Tn/gSF7230peg4XBKxxMnwkDFEInBv5AiGvAguDL\nJ7j2/+c9/38A55syewB42mNgZGBgAOIT2yIux/PbfGVgZH4BFGG4HDI3AUqv/6/x7wvTauZZQC47\nAxNIFACKfg46eNpjYGRgYN72n42Bgen8f42/n5lWMwBFUEA0AJweBrF42k2QTSsEUBSGn/caNPmY\nGEwWzMyKYilkMWQpyh/w8QssbGyUpRUbhchsFBZ2VoqslCRfsVBKFGmyoSnl6zhIzeLt3Hvec557\nzlWeIbWDLukIjWaat5zmzEINcTbo1rY9aZ8WfdDAEj2ap1TLRLTgNcNUapcYi1RxYc2hy70HZ+3Z\no3JUacCyyjrviGJNO3vFdWOZ0E+D6u1N25RrhqBp99eI6s7jMSWasGcdElPKvjRGYJN2DmhjynIc\nktApEc91qtVeufK3R+2dLap/apWiThGivNinojRhdsu9z75FUTgh7TOmNUL6t++v9+tX//fCXIGn\nIueu+74v9hgSxHVOMqR8j2Hn9VGhDte4/1OGpAZJsENvmKSOM8o0SyuQVa2qybPKNTdccuGnVQVW\nfuI3OjV0lQAAAG4AbgEMAYQCKgLUA2IDnAP+BGgE3AUABXwF/AaEBxAHege6CAYIbgj4CawKNgsg\nC7YMKgx+DPANag3SDhgOyA9eD9QQfhD+EYQSXBLyE6oT6BQKFEYUchTMFgQWJhamFwoXOheEF8IX\n/BiyGWIaEBpiGqIa1BsoG2IbvBvEG8wb1BvcG+wb9Bv8HAQcDBwcHCQcLBxcHXAeJh7eHzAfnh/a\nICAgLiCMIPQhbCGuImYiuiMYI2Aj8iSSJXglqCXuJlAmhCbqJxonSieyJ+QoFChEAAEAAABpAKEA\nCgAnAAIAAgAcACwAdwAAAIUL4gABAAF42q1VT28bRRR/buKoTdKKIriUCuZCQShdOxVFqJGQTGpX\npakjtUmrcurYOxtvtbtjzY6d+orEhTNfoBekXvgAiA/QK3c+BUKCI795M+vYbRzSqB7NzpuZ9+f3\nfu/tmoiu1h5RjfyvjenlGn2InZfP0Qp9H+Ql+pSeBnmZrtKPQa7TRXoR5BW6Qr8G+Tx9QK+CfIE+\noj+DvAadf4K8Tp/ULgf54rkXtWaQL9FnS38gYm35AnY/Lf0b5Bp9vfxDkM/RpeXfgrxE3y2/CvIy\nfVl/P8h1ulLvBHkF50+DfJ4+r/8c5Av0Vf33IK9B568gr9M3K9eCfLH+7Uoc5EvUXfslyO/RF2t/\nB/kyra9/vK2HE5MeDKx4KW40N2+K3kTcloUUXZ2Ia6I1NnIgc7GtTZGoLI5EK8sEG5TCqFKZsYoj\nNngiY1yqpJpdbXKZbUbNZnNr/97j7pbTgtKsznWvdKy98HePlClTXQh2tNjFnGX7+RDYyhPyGFg7\nvNVoSGhXM+rrKM0a7qbE1eHhYdRTA1n0VVQo24jhrNBJd3fv7nZb7HZEa6fdqabYwWH3YVu07jxo\nt++3u3urq3uDtBSJLqwodWIPpVGir/PhyCojhkYfGMCBhh0otx0qYycCWGcTicQTPTJiVCp34zTn\n/cG8HPWeqb4VVvM9nOelkEWMWEWcWjBXVrbzFEFlH+UTO2lfFQjQOjBK5aqwkVhd5bC+LeDYxT82\neJbmqVVxFVx52qv2KK10l2khJs7dXPhjona0gQeZDzO14SxELiei0FbkOk4TcGOEjOXQvgllXt0a\nWZQJMoNBnJbWpD1wfkwCQC2LiQDzJfrLmfb1WBlAxjtwCsgbzPNs6OOJki4FFw/NJHSBcg8mZdqX\nmch0X7oSiVGROeICgdnEdcQ4jQFFw585TOH4lDwu7mwHopF5gwZtk6YhTchQSgc0IEuCXmLeoCZt\n0k1IPdwKuk2SCkxBXVgkWK9htmgMSwk7STn2zpuBXkKKMoopYp0MQ8xEKHmnsCqsYzyd5lGEJ3jG\nwVLB1+urx2AQUeLkAc4OaARJ4mwTnpo8tmif7tFj6G5NfXvPi/xen/N7FptHnFGJTDVsxQyas3hb\nnH+bnqNqnsPyjLVxlbDwcosaGDL4fn2NqA+7CBll0KpsymB1yCNCjyiOU0BbYV/gaXEfB2QF4+rS\nLu3RXSBpA88udRjlDnadN1aB1Wt26SHrt+gOat3GuM+ne7SKsYe4KXdUwpy7/i05mgUyyRwJziEH\n7hFOXYUEs6fRNyaw431YeFPT2yHrWu5/z+uiikTctRr+ne8Rd3ZlU/k8CZ+PXsKyR89w0mc9C70j\ne488Z03HaBzyclKKW99z5RtxT+oi72U/vImO85QrWIQMWsyQwsj51HKmjvejbGe/HB5xlf/pM8+w\n5pyFYkTzmau5bn/9S1JilVPLlN+7yRTd4uxPl2uH3xqPQXIPOfuNaQzB76rrENfjlveaK5KEvjFc\nL/cmDANH/8fKSd4td6zDnISa+QgxM2mZm17o89NVwHPtfE648/0XzH+/qqiuz8Z841n2/wnvhuWN\nmX5elPXbdJScVsFMbSRno/m75HIcwHvJyCT/N2W467Nl9eUe4ZlNO26+A7PAlGFWUiD3rOiAzwBN\nGhC/2348yze7YqLBb9lRhMZb/OPO/Cv9Bw7J9kZ42m3PN05DQRSF4XOccc45k7MxmNAAb+zxMgyU\nbkBC8gooWQMLgJLYQQGsB3YABo47Rnr6NdK799PAhd/zdYUs/jvD8eemi2566KWPfgY4xSBDDDPC\nKGOMM8EkU0wzwyxzzLPAIkssI4U0MuO9OeRRQBEllBHBAV5RQQwe+JBAE14EUUUSBgMcYx+HCCGM\nO9wijmvc4BkveMc9HvCIJ7yxwipr8LPOBk5QRwM1fOATAURxhEtcwGGT05zhLOc4zwUuconLXOEq\n17jOln90Omx1epNuqG11U91SO+q2uqPuqnuqoxq1q/ZUq/b/auVb+Va+lW/lW/lWvpVv5Vv5Vn5f\n833NG+uxo/Ozn0u75esnI9wIN8KNcs1kWLgRboQb4Ua4Ga84U503e31X+7usbkk0/kkAAAAABAAH\n//8ADgAA') format('woff');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink: #FFC8DD;
+            --gold: #C9A84C;
+            --white: #FFFDF9;
+            --dark: #1a1a1a;
+            --light-border: #f0e6e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--white) 0%, #fef9f5 100%);
+            color: var(--dark);
+            direction: rtl;
+            min-height: 100vh;
+        }
+
+        header {
+            background: white;
+            border-bottom: 3px solid var(--gold);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 16px rgba(201,168,76,0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .bsd {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        .header-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.8px;
+            font-family: 'Dana Yad Alef', sans-serif;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--light-border);
+            background: white;
+            padding: 0 2rem;
+            overflow-x: auto;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+
+        .tab {
+            padding: 1.2rem 1.8rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-weight: 700;
+            color: #999;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .tab.active {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        .tab:hover {
+            color: var(--pink);
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2.5rem;
+            padding: 2.5rem;
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+
+        .panel {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid var(--light-border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .panel-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--pink);
+            font-family: 'Dana Yad Alef', sans-serif;
+        }
+
+        .content-tab {
+            display: none;
+        }
+
+        .content-tab.active {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2.5rem;
+            padding: 2.5rem;
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar Blocks */
+        .blocks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .block-category {
+            border-top: 2px solid var(--pink);
+            padding-top: 1.2rem;
+        }
+
+        .block-category:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .category-label {
+            font-size: 0.75rem;
+            font-weight: 900;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .block-btn {
+            padding: 0.85rem 1.2rem;
+            background: white;
+            border: 2px solid var(--pink);
+            color: var(--dark);
+            border-radius: 12px;
+            cursor: grab;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-align: right;
+            box-shadow: 0 2px 6px rgba(255,200,221,0.2);
+        }
+
+        .block-btn:hover {
+            background: var(--pink);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,200,221,0.35);
+        }
+
+        .block-btn:active {
+            cursor: grabbing;
+            transform: translateY(-1px);
+        }
+
+        .canvas-area {
+            background: linear-gradient(135deg, rgba(255,200,221,0.08) 0%, rgba(201,168,76,0.08) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            min-height: 700px;
+            border: 2px dashed var(--light-border);
+            position: relative;
+        }
+
+        .canvas-empty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #aaa;
+            font-size: 1.1rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .blocks-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .workflow-block {
+            padding: 1.3rem 1.5rem;
+            border-radius: 14px;
+            border-left: 5px solid;
+            background: white;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: move;
+            transition: all 0.25s ease;
+        }
+
+        .workflow-block:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+
+        .workflow-block.trigger {
+            border-left-color: #3b82f6;
+            background: linear-gradient(90deg, rgba(59,130,246,0.05) 0%, white 100%);
+        }
+
+        .workflow-block.api {
+            border-left-color: var(--gold);
+            background: linear-gradient(90deg, rgba(201,168,76,0.05) 0%, white 100%);
+        }
+
+        .workflow-block.script {
+            border-left-color: var(--pink);
+            background: linear-gradient(90deg, rgba(255,200,221,0.05) 0%, white 100%);
+        }
+
+        .workflow-block.voice {
+            border-left-color: #8b5cf6;
+            background: linear-gradient(90deg, rgba(139,92,246,0.05) 0%, white 100%);
+        }
+
+        .workflow-block.file {
+            border-left-color: #ec4899;
+            background: linear-gradient(90deg, rgba(236,72,153,0.05) 0%, white 100%);
+        }
+
+        .workflow-block.logic {
+            border-left-color: #f59e0b;
+            background: linear-gradient(90deg, rgba(245,158,11,0.05) 0%, white 100%);
+        }
+
+        .block-info {
+            flex: 1;
+            text-align: right;
+        }
+
+        .block-name {
+            font-weight: 800;
+            color: var(--dark);
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .block-desc {
+            font-size: 0.8rem;
+            color: #888;
+            max-height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .block-toolbar {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .block-icon-btn {
+            padding: 0.5rem 0.8rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+
+        .edit-btn {
+            background: var(--gold);
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background: #b39236;
+        }
+
+        .delete-btn {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background: #ff5252;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            border-radius: 18px;
+            padding: 2.5rem;
+            max-width: 750px;
+            width: 100%;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+            animation: modalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        @keyframes modalIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--dark);
+            text-align: right;
+            border-bottom: 3px solid var(--pink);
+            padding-bottom: 1.2rem;
+        }
+
+        .form-field {
+            margin-bottom: 1.5rem;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-align: right;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light-border);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            text-align: right;
+            direction: rtl;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 5px rgba(201,168,76,0.15);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .code-field {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            background: #f7f7f7;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: flex-end;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--light-border);
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pink) 0%, var(--gold) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255,200,221,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,200,221,0.4);
+        }
+
+        .btn-secondary {
+            background: var(--light-border);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: #e0d0c5;
+        }
+
+        .footer-actions {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .btn-action {
+            padding: 1.1rem 2.8rem;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(255,200,221,0.2);
+        }
+
+        /* Info Box */
+        .info-banner {
+            background: linear-gradient(135deg, rgba(255,200,221,0.15) 0%, rgba(201,168,76,0.1) 100%);
+            border-right: 5px solid var(--gold);
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: right;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            padding: 2.5rem;
+        }
+
+        .guide-block {
+            background: linear-gradient(135deg, rgba(255,200,221,0.1) 0%, rgba(201,168,76,0.08) 100%);
+            border: 2px solid var(--light-border);
+            border-radius: 14px;
+            padding: 1.5rem;
+            border-right: 5px solid var(--gold);
+        }
+
+        .guide-block h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            font-weight: 800;
+        }
+
+        .guide-block code {
+            background: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-family: 'Monaco', monospace;
+            font-size: 0.8rem;
+            color: #c41e3a;
+        }
+
+        .guide-block p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0.7rem;
+        }
+
+        .guide-block pre {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 0.8rem;
+            font-size: 0.75rem;
+            border-left: 3px solid var(--pink);
+        }
+
+        .status-notify {
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 1.5rem;
+            display: none;
+            font-weight: 600;
+            animation: slideDown 0.3s ease;
+        }
+
+        .status-notify.show {
+            display: block;
+        }
+
+        .status-notify.success {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+
+        .status-notify.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .content-tab.active {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .variable-item {
+            background: linear-gradient(135deg, rgba(255,200,221,0.1) 0%, rgba(201,168,76,0.08) 100%);
+            padding: 1.2rem;
+            border-radius: 12px;
+            border-right: 3px solid var(--gold);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .variable-info {
+            text-align: right;
+        }
+
+        .variable-name {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 0.95rem;
+        }
+
+        .variable-value {
+            font-size: 0.8rem;
+            color: #666;
+            word-break: break-all;
+            margin-top: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="bsd">בס״ד</div>
+        <div class="header-title">⚙️ בונה אוטומציה</div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('builder', this)">🏗️ בונה</button>
+        <button class="tab" onclick="switchTab('guide', this)">📖 מדריך</button>
+        <button class="tab" onclick="switchTab('variables', this)">💾 משתנים</button>
+    </div>
+
+    <!-- BUILDER TAB -->
+    <div id="builder" class="content-tab active">
+        <div class="panel">
+            <div class="panel-title">
+                <span>⚙️</span>
+                בלוקים
+            </div>
+
+            <div class="info-banner">
+                בחר בלוק וגרור לעמודה הימנית. אתה יכולה להכניס כל פקודה, Token, או קוד שתרצה!
+            </div>
+
+            <div class="blocks-list">
+                <!-- Triggers -->
+                <div class="block-category">
+                    <div class="category-label">🔔 טריגרים</div>
+                    <button class="block-btn" onclick="showModal('trigger')">+ טריגר חופשי</button>
+                </div>
+
+                <!-- APIs -->
+                <div class="block-category">
+                    <div class="category-label">🌐 API ושירותים</div>
+                    <button class="block-btn" onclick="showModal('canva')">🎨 Canva</button>
+                    <button class="block-btn" onclick="showModal('telegram')">💬 Telegram</button>
+                    <button class="block-btn" onclick="showModal('github')">🐙 GitHub</button>
+                    <button class="block-btn" onclick="showModal('api')">🔗 API כללי</button>
+                </div>
+
+                <!-- Code -->
+                <div class="block-category">
+                    <div class="category-label">💻 קוד וסקריפטים</div>
+                    <button class="block-btn" onclick="showModal('nodejs')">🟩 Node.js</button>
+                    <button class="block-btn" onclick="showModal('python')">🐍 Python</button>
+                    <button class="block-btn" onclick="showModal('bash')">🖥️ Bash</button>
+                    <button class="block-btn" onclick="showModal('javascript')">🟨 JavaScript</button>
+                </div>
+
+                <!-- Voice & Files -->
+                <div class="block-category">
+                    <div class="category-label">🗣️ קול וקבצים</div>
+                    <button class="block-btn" onclick="showModal('voice')">🎤 פקודה קולית</button>
+                    <button class="block-btn" onclick="showModal('speak')">🔊 דבור בקול</button>
+                    <button class="block-btn" onclick="showModal('file')">📄 פעולה בקובץ</button>
+                    <button class="block-btn" onclick="showModal('folder')">📁 פעולה בתיקייה</button>
+                </div>
+
+                <!-- Logic -->
+                <div class="block-category">
+                    <div class="category-label">⚡ לוגיקה</div>
+                    <button class="block-btn" onclick="showModal('condition')">❓ If/Then/Else</button>
+                    <button class="block-btn" onclick="showModal('loop')">🔁 לולאה</button>
+                    <button class="block-btn" onclick="showModal('delay')">⏳ המתן</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: contents;">
+            <div class="panel" style="grid-column: 2;">
+                <div class="panel-title">
+                    <span>▶️</span>
+                    זרימת האוטומציה
+                </div>
+
+                <div class="canvas-area" id="canvas">
+                    <div class="canvas-empty" id="emptyCanvas">
+                        גרור בלוקים לכאן כדי ליצור אוטומציה ✨
+                    </div>
+                    <div class="blocks-flow" id="flow"></div>
+                </div>
+
+                <div class="footer-actions">
+                    <button class="btn btn-primary btn-action" onclick="saveAutomation()">💾 שמור אוטומציה</button>
+                    <button class="btn btn-secondary btn-action" onclick="clearAll()">🗑️ נקה הכל</button>
+                </div>
+
+                <div class="status-notify" id="status"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GUIDE TAB -->
+    <div id="guide" class="content-tab" style="grid-column: 1 / -1; padding: 0;">
+        <div style="grid-column: 1 / -1; padding: 0;">
+            <div class="panel" style="border-radius: 0;">
+                <div class="panel-title">
+                    <span>📖</span>
+                    מדריך פקודות מלא
+                </div>
+
+                <div>
+                    <!-- Canva -->
+                    <div class="guide-block">
+                        <h3>🎨 Canva API</h3>
+                        <p><strong>צריך:</strong> Canva API Key</p>
+                        <pre>GET https://api.canva.com/v1/designs
+Authorization: Bearer API_KEY</pre>
+                        <p><strong>פעולות:</strong> צור עיצוב, קבל תשובה, וכו'</p>
+                    </div>
+
+                    <!-- Telegram -->
+                    <div class="guide-block">
+                        <h3>💬 Telegram API</h3>
+                        <p><strong>צריך:</strong> Bot Token מ @BotFather</p>
+                        <pre>https://api.telegram.org/botTOKEN/sendMessage
+?chat_id=ID&text=message</pre>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="guide-block">
+                        <h3>🐙 GitHub</h3>
+                        <pre>git add .
+git commit -m "message"
+git push origin main</pre>
+                        <p>או דרך API עם Token</p>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="guide-block">
+                        <h3>🟩 Node.js</h3>
+                        <pre>const fs = require('fs');
+fs.readFile('/path', (e, d) => {
+  console.log(d);
+});</pre>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="guide-block">
+                        <h3>🐍 Python</h3>
+                        <pre>with open('/path', 'r') as f:
+    content = f.read()
+print(content)</pre>
+                    </div>
+
+                    <!-- Bash -->
+                    <div class="guide-block">
+                        <h3>🖥️ Bash / Shell</h3>
+                        <pre>cd /path/to/folder
+ls -la
+cat filename.txt</pre>
+                    </div>
+
+                    <!-- Voice -->
+                    <div class="guide-block">
+                        <h3>🎤 פקודות קוליות</h3>
+                        <p>"פתח את תיקיית הפרויקטים"</p>
+                        <p>"שלח הודעה"</p>
+                        <p>"הפעל אוטומציה"</p>
+                    </div>
+
+                    <!-- Variables -->
+                    <div class="guide-block">
+                        <h3>💾 שימוש במשתנים</h3>
+                        <p>שמור משתנה: <code>$telegram_token</code></p>
+                        <p>בשימוש: <code>Bearer $token</code></p>
+                        <p>בכל בלוק אתה יכול להשתמש בסימן $</p>
+                    </div>
+
+                    <!-- Files -->
+                    <div class="guide-block">
+                        <h3>📁 נתיחות קבצים</h3>
+                        <pre>/Users/name/Documents/
+/home/user/Desktop/
+C:\Users\Name\Downloads\</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VARIABLES TAB -->
+    <div id="variables" class="content-tab" style="grid-column: 1 / -1; padding: 0;">
+        <div style="grid-column: 1 / -1; padding: 0;">
+            <div class="panel" style="border-radius: 0;">
+                <div class="panel-title">
+                    <span>💾</span>
+                    משתנים וTokens
+                </div>
+
+                <div class="info-banner">
+                    שמור כאן Tokens, נתיחות, וערכים. תוכלי להשתמש בהם בכל בלוק עם $variableName
+                </div>
+
+                <div style="margin-bottom: 2.5rem; padding: 0 2rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--gold); font-weight: 800;">הוסף משתנה חדש</h3>
+                    <div class="form-field">
+                        <label class="field-label">שם המשתנה:</label>
+                        <input type="text" id="varName" placeholder="למשל: telegram_token, project_folder">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">ערך:</label>
+                        <textarea id="varValue" placeholder="הערך, Token, או נתיח"></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="addVariable()" style="width: 100%;">הוסף משתנה</button>
+                </div>
+
+                <div style="padding: 0 2rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--gold); font-weight: 800;">משתנים שמורים</h3>
+                    <div id="varsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box">
+            <div class="modal-header" id="modalTitle">בלוק חדש</div>
+            <div id="modalContent"></div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal()">ביטול</button>
+                <button class="btn btn-primary" onclick="addBlock()">הוסף בלוק</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let blocks = [];
+        let variables = {};
+        let currentBlockType = null;
+
+        const blockForms = {
+            trigger: {
+                title: 'הוסף טריגר',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">תיאור:</label>
+                        <textarea id="f_desc" placeholder="כאשר מה? (למשל: כל בוקר בשעה 08:00)"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פקודה / תנאי:</label>
+                        <input type="text" id="f_cmd" placeholder="כמו: time == 08:00">
+                    </div>
+                `
+            },
+            canva: {
+                title: 'Canva - עיצובים מהממים',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">Canva API Key:</label>
+                        <input type="password" id="f_key" placeholder="your_canva_api_key">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פעולה:</label>
+                        <select id="f_action">
+                            <option>קבל עיצובים</option>
+                            <option>צור עיצוב חדש</option>
+                            <option>עדכן עיצוב</option>
+                            <option>הורד כתמונה</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פרטים נוספים:</label>
+                        <textarea id="f_detail" placeholder="ID של עיצוב, שם פרויקט, וכו'"></textarea>
+                    </div>
+                `
+            },
+            telegram: {
+                title: 'Telegram - שלח הודעה',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">Bot Token:</label>
+                        <input type="password" id="f_token" placeholder="123456:ABCDEFghijklmn">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">Chat ID:</label>
+                        <input type="text" id="f_chat" placeholder="123456789">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">הודעה:</label>
+                        <textarea id="f_msg" placeholder="כתוב הודעה (אתה יכול להשתמש ב$variable)"></textarea>
+                    </div>
+                `
+            },
+            github: {
+                title: 'GitHub - עדכן Repository',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">Repository Path:</label>
+                        <input type="text" id="f_path" placeholder="/home/user/my-project">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">Git Commands:</label>
+                        <textarea id="f_git" placeholder="git add .&#10;git commit -m 'update'&#10;git push"></textarea>
+                    </div>
+                `
+            },
+            api: {
+                title: 'API כללי - GET/POST',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">שיטה:</label>
+                        <select id="f_method">
+                            <option>GET</option>
+                            <option>POST</option>
+                            <option>PUT</option>
+                            <option>DELETE</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">URL:</label>
+                        <input type="text" id="f_url" placeholder="https://api.example.com/endpoint">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">Authorization:</label>
+                        <input type="text" id="f_auth" placeholder="Bearer TOKEN">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">Body (JSON):</label>
+                        <textarea id="f_body" class="code-field" placeholder='{"key": "value"}'></textarea>
+                    </div>
+                `
+            },
+            nodejs: {
+                title: 'Node.js - הפעל קוד',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">קוד:</label>
+                        <textarea id="f_code" class="code-field" placeholder="const fs = require('fs');&#10;// קוד שלך"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">npm packages:</label>
+                        <input type="text" id="f_pkg" placeholder="axios, dotenv, moment">
+                    </div>
+                `
+            },
+            python: {
+                title: 'Python - הפעל סקריפט',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">קוד Python:</label>
+                        <textarea id="f_code" class="code-field" placeholder="import os&#10;import requests&#10;# סקריפט שלך"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">Version:</label>
+                        <select id="f_ver">
+                            <option>3.11</option>
+                            <option>3.10</option>
+                            <option>3.9</option>
+                        </select>
+                    </div>
+                `
+            },
+            bash: {
+                title: 'Bash / Shell',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">פקודות:</label>
+                        <textarea id="f_code" class="code-field" placeholder="#!/bin/bash&#10;cd /path&#10;ls -la"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">תיקייה זמינה:</label>
+                        <input type="text" id="f_dir" placeholder="/home/user">
+                    </div>
+                `
+            },
+            javascript: {
+                title: 'JavaScript',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">קוד:</label>
+                        <textarea id="f_code" class="code-field" placeholder="console.log('Hello');&#10;// קוד שלך"></textarea>
+                    </div>
+                `
+            },
+            voice: {
+                title: 'פקודה קולית',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">מה לשמוע:</label>
+                        <textarea id="f_hear" placeholder="פתח את תיקיית הפרויקטים&#10;שלח הודעה ל..."></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">מה לעשות:</label>
+                        <textarea id="f_do" placeholder="הפעל סקריפט, שלח הודעה, וכו'"></textarea>
+                    </div>
+                `
+            },
+            speak: {
+                title: 'דבור בקול',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">טקסט:</label>
+                        <textarea id="f_text" placeholder="כאשר המכשיר מחובר, הקרא בקול..."></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">שפה:</label>
+                        <select id="f_lang">
+                            <option value="he">עברית</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                `
+            },
+            file: {
+                title: 'פעולה בקובץ',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">נתיח לקובץ:</label>
+                        <input type="text" id="f_file" placeholder="/Users/name/Documents/file.txt">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פעולה:</label>
+                        <select id="f_act">
+                            <option>קרא תוכן</option>
+                            <option>כתוב תוכן</option>
+                            <option>הוסף לסוף</option>
+                            <option>מחק</option>
+                            <option>שנה שם</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">תוכן:</label>
+                        <textarea id="f_content" placeholder="תוכן לכתיבה"></textarea>
+                    </div>
+                `
+            },
+            folder: {
+                title: 'פעולה בתיקייה',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">נתיח:</label>
+                        <input type="text" id="f_fold" placeholder="/Users/name/Documents/Projects">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פעולה:</label>
+                        <select id="f_act">
+                            <option>רשום קבצים</option>
+                            <option>צור תיקייה</option>
+                            <option>מחק תיקייה</option>
+                            <option>חפש קבצים</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פרט:</label>
+                        <input type="text" id="f_det" placeholder="שם תיקייה או חיפוש">
+                    </div>
+                `
+            },
+            condition: {
+                title: 'If / Then / Else',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">בדוק:</label>
+                        <input type="text" id="f_if" placeholder="$battery < 20">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">אם נכון:</label>
+                        <textarea id="f_then" placeholder="מה לעשות"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">אם לא:</label>
+                        <textarea id="f_else" placeholder="מה לעשות אם לא"></textarea>
+                    </div>
+                `
+            },
+            loop: {
+                title: 'לולאה',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">סוג:</label>
+                        <select id="f_type">
+                            <option>חזור N פעמים</option>
+                            <option>FOR EACH בקובץ</option>
+                            <option>WHILE תנאי</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פרט:</label>
+                        <input type="text" id="f_det" placeholder="5 או /path">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">פעולה:</label>
+                        <textarea id="f_act" placeholder="מה לחזור עליו"></textarea>
+                    </div>
+                `
+            },
+            delay: {
+                title: 'המתן',
+                html: `
+                    <div class="form-field">
+                        <label class="field-label">משך:</label>
+                        <input type="number" id="f_time" placeholder="5" min="1">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label">יחידה:</label>
+                        <select id="f_unit">
+                            <option>שניות</option>
+                            <option>דקות</option>
+                            <option>שעות</option>
+                        </select>
+                    </div>
+                `
+            }
+        };
+
+        function switchTab(tabId, btn) {
+            document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        function showModal(type) {
+            currentBlockType = type;
+            const form = blockForms[type];
+            document.getElementById('modalTitle').textContent = form.title;
+            document.getElementById('modalContent').innerHTML = form.html;
+            document.getElementById('modal').classList.add('show');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
+        }
+
+        function getFormValues() {
+            const inputs = document.querySelectorAll('#modalContent input, #modalContent textarea, #modalContent select');
+            const values = {};
+            inputs.forEach(input => {
+                if (input.id) values[input.id] = input.value;
+            });
+            return values;
+        }
+
+        function addBlock() {
+            const values = getFormValues();
+            if (!Object.values(values).some(v => v)) {
+                showStatus('אנא מלא שדה', 'error');
+                return;
+            }
+
+            blocks.push({
+                id: Date.now(),
+                type: currentBlockType,
+                title: blockForms[currentBlockType].title,
+                values: values
+            });
+
+            renderFlow();
+            closeModal();
+            showStatus('✅ בלוק התווסף!', 'success');
+        }
+
+        function renderFlow() {
+            const flow = document.getElementById('flow');
+            const empty = document.getElementById('emptyCanvas');
+
+            if (blocks.length === 0) {
+                empty.style.display = 'flex';
+                flow.innerHTML = '';
+                return;
+            }
+
+            empty.style.display = 'none';
+            flow.innerHTML = blocks.map((b, i) => {
+                const typeClass = ['canva', 'telegram', 'github', 'api'].includes(b.type) ? 'api' :
+                                 ['nodejs', 'python', 'bash', 'javascript'].includes(b.type) ? 'script' :
+                                 ['voice', 'speak'].includes(b.type) ? 'voice' :
+                                 ['file', 'folder'].includes(b.type) ? 'file' :
+                                 ['condition', 'loop'].includes(b.type) ? 'logic' : 'trigger';
+
+                return `
+                    <div class="workflow-block ${typeClass}">
+                        <div class="block-toolbar">
+                            <button class="block-icon-btn edit-btn" onclick="editBlock(${b.id})">✏️</button>
+                            <button class="block-icon-btn delete-btn" onclick="deleteBlock(${b.id})">🗑️</button>
+                        </div>
+                        <div class="block-info">
+                            <div class="block-name">${i + 1}. ${b.title}</div>
+                            <div class="block-desc">${JSON.stringify(b.values).substring(0, 80)}...</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function deleteBlock(id) {
+            blocks = blocks.filter(b => b.id !== id);
+            renderFlow();
+            showStatus('בלוק הוסר', 'success');
+        }
+
+        function editBlock(id) {
+            const block = blocks.find(b => b.id === id);
+            if (!block) return;
+            showModal(block.type);
+            setTimeout(() => {
+                Object.entries(block.values).forEach(([k, v]) => {
+                    const el = document.getElementById(k);
+                    if (el) el.value = v;
+                });
+            }, 50);
+        }
+
+        function clearAll() {
+            if (confirm('מוחקים הכל?')) {
+                blocks = [];
+                renderFlow();
+                showStatus('נמחק', 'success');
+            }
+        }
+
+        function saveAutomation() {
+            if (blocks.length === 0) {
+                showStatus('הוסף בלוק לפחות', 'error');
+                return;
+            }
+
+            const name = prompt('שם האוטומציה:');
+            if (!name) return;
+
+            const data = {
+                name, timestamp: new Date().toLocaleString('he-IL'), variables, blocks
+            };
+
+            const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `automation-${name}.json`;
+            a.click();
+
+            showStatus(`✅ שמורה: ${name}`, 'success');
+        }
+
+        function addVariable() {
+            const name = document.getElementById('varName').value;
+            const value = document.getElementById('varValue').value;
+
+            if (!name || !value) {
+                showStatus('הזן שם וערך', 'error');
+                return;
+            }
+
+            variables[name] = value;
+            document.getElementById('varName').value = '';
+            document.getElementById('varValue').value = '';
+            renderVariables();
+            showStatus('משתנה התווסף!', 'success');
+        }
+
+        function renderVariables() {
+            const list = document.getElementById('varsList');
+            if (!Object.keys(variables).length) {
+                list.innerHTML = '<p style="color: #999;">אין משתנים עדיין</p>';
+                return;
+            }
+
+            list.innerHTML = Object.entries(variables).map(([name, value]) => `
+                <div class="variable-item">
+                    <button class="btn btn-secondary" onclick="deleteVariable('${name}')" style="padding: 0.5rem 1rem;">הסר</button>
+                    <div class="variable-info">
+                        <div class="variable-name">$${name}</div>
+                        <div class="variable-value">${value.substring(0, 120)}${value.length > 120 ? '...' : ''}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function deleteVariable(name) {
+            delete variables[name];
+            renderVariables();
+        }
+
+        function showStatus(msg, type) {
+            const el = document.getElementById('status');
+            el.textContent = msg;
+            el.className = `status-notify show ${type}`;
+            setTimeout(() => el.classList.remove('show'), 3000);
+        }
+
+        renderFlow();
+        renderVariables();
+    </script>
+</body>
+</html>
